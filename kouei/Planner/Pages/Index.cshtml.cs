@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Planner.Models;
 
 namespace Planner.Pages;
 
@@ -14,5 +15,7 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
+        StationTable.PopulateHashTable(); // TODO fix this
+        StationParser.GetStations();
     }
 }
